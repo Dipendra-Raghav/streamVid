@@ -1,0 +1,60 @@
+/* frontend/src/components/RegisterPage.css */
+
+.register-page {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  height: 100vh; /* Set the height of the page to viewport height */
+}
+
+.register-heading {
+  font-size: 2.5rem; /* Increase font size */
+}
+
+.input-container {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start (top left) */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px; /* Decrease the maximum width of input fields */
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  width: calc(100% - 20px); /* Adjust input width */
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.register-button,
+.login-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Blue color */
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.register-button:hover,
+.login-button:hover {
+  background-color: #0056b3; /* Darker shade of blue on hover */
+}
