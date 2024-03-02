@@ -35,7 +35,21 @@ const uploadVideo = asyncHandler(async (req,res)=>{
     )
     
 });
+
+const getVideos = asyncHandler(async (req, res) => {
+    try {
+      // Fetch all videos from the database
+      console.log("chk print")
+      const videos = await Video.find().sort({ createdAt: -1 }); // Assuming you want to sort by createdAt in descending order
+      res.status(200).json(new ApiResponse(200, { videos }, "Videos retrieved successfully"));
+    } catch (error) {
+      console.error('Error fetching videos:', error);
+      res.status(500).json(new ApiResponse(500, {}, 'Failed to fetch videos'));
+    }
+  });
+  
 export {
-    uploadVideo
+    uploadVideo,
+    getVideos
 }
 

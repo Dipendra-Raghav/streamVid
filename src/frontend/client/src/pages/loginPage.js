@@ -38,6 +38,7 @@ import './loginPage.css';
       console.log(data);
       
       // Redirect to a different page after successful login
+      console.log("log before login");
       navigate("/home")
     } catch (error) {
       console.error('Error during login:', error.message);
